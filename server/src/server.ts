@@ -3,8 +3,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
 
-// import { Foo } from "common/typings";
-// console.log("->", Object.keys(Foo));
+import { Foo } from "common/dist";
 
 // Load environment variables
 dotenv.config();
@@ -31,7 +30,7 @@ mongoose
 
 // Basic route
 app.get("/", (req: Request, res: Response) => {
-  res.json({ message: "Welcome to the API" });
+  res.json({ message: "Welcome to the API", common: Object.keys(Foo) });
 });
 
 // Error handling middleware

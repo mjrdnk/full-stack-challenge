@@ -29,7 +29,9 @@ services:
       - "5001:5001"
     volumes:
       - ./server:/app/server
+      - ./common:/app/common
       - /app/server/node_modules
+      - /app/common/node_modules
     environment:
       - MONGODB_URI=mongodb://mongo:27017/mydb
       - WATCHPACK_POLLING=true
