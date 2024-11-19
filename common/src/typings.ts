@@ -1,14 +1,10 @@
 export enum Foo {
   BAZ = "baz",
-};
-
-export interface User {
-  id: string;
-  name: string;
-  email: string;
 }
 
-export enum UserRole {
-  ADMIN = 'ADMIN',
-  USER = 'USER'
+export interface IBook {
+  title: string;
+  author: string;
+  price: number;
+  stock: number;
 }

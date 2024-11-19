@@ -7,7 +7,9 @@
     "start": "node dist/server.js",
     "dev": "nodemon src/server.ts",
     "build": "tsc",
-    "watch": "tsc --watch"
+    "watch": "tsc --watch",
+    "test": "PORT=5002 jest",
+    "test:watch": "PORT=5002 jest --watch"
   },
   "author": "",
   "license": "ISC",
@@ -15,7 +17,12 @@
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
     "nodemon": "^3.1.7",
-    "ts-node": "^10.9.2"
+    "ts-node": "^10.9.2",
+    "@types/jest": "^29.5.0",
+    "@types/supertest": "^2.0.12",
+    "jest": "^29.5.0",
+    "supertest": "^6.3.3",
+    "ts-jest": "^29.1.0"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -23,5 +30,9 @@
     "express": "^4.21.1",
     "mongoose": "^8.8.1",
     "common": "file:../common"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
   }
 }

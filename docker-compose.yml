@@ -33,7 +33,7 @@ services:
       - /app/server/node_modules
       - /app/common/node_modules
     environment:
-      - MONGODB_URI=mongodb://mongo:27017/mydb
+      - MONGODB_URI=mongodb://mongo:27017/bookstore
       - WATCHPACK_POLLING=true
       - CHOKIDAR_USEPOLLING=true
     depends_on:
