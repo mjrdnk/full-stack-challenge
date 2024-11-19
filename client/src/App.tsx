@@ -30,12 +30,6 @@ function App() {
     })();
   }, []);
 
-  const getBookById = async (id: string) => {
-    const response = await fetch(`http://localhost:5001/api/books/${id}`);
-    const data = await response.json();
-    return data;
-  };
-
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const title = titleRef.current?.value;
